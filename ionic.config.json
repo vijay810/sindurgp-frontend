@@ -1,0 +1,7 @@
+{
+  "name": "sindurgp-frontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
