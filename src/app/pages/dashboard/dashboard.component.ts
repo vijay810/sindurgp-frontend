@@ -12,10 +12,10 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     setTimeout(() => {
-      const carouselEl = document.querySelector('#carouselExampleAutoplaying');
+      const carouselEl = document.querySelector('#autoplaying');
       if (carouselEl) {
         new Carousel(carouselEl, {
-          interval: 3000, 
+          interval: 4000, 
           ride: 'carousel', 
           pause: false, 
           wrap: true, 
