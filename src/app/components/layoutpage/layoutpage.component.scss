@@ -1,0 +1,19 @@
+.top-scroll{
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+    z-index: 1;
+    color: #ffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+   background: linear-gradient(135deg, #92352e, #ff491b);
+    border: 1px solid red;
+}
+.top-scroll .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+}

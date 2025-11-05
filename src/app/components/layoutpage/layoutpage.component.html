@@ -1,7 +1,16 @@
-<ion-content>
-    <app-header></app-header>
-
+<ion-content (ionScroll)="onScroll($event)" [scrollEvents]="true">
+  <app-header></app-header>
+  <div class="vh-100">
     <router-outlet></router-outlet>
-    <app-footer></app-footer>
-  </ion-content>
-  
+  </div>
+  <app-footer></app-footer>
+
+</ion-content>
+
+@if (showScrollButton) {
+<div class="top-scroll pointer" (click)="scrollToTop()">
+  <div class="icon">
+    <i class="fa-solid fa-arrow-up fa-beat-fade"></i>
+  </div>
+</div>
+}
