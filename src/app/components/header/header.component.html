@@ -1,0 +1,178 @@
+<nav class="navbar navbar-expand-lg top-header py-2">
+  <div class="container-fluid padding">
+    <div class="d-flex flex-column flex-md-row  align-items-md-center justify-content-between w-100">
+
+      <ul class="navbar-nav d-flex flex-column flex-md-row mb-1 mb-md-0 text-center font14">
+        <li class="nav-item me-md-3 mb-1 mb-md-0">
+          <a class="nav-link py-1 font14" href="#"><i class="fa-solid fa-building-columns"></i> Government of
+            Maharashtra | महाराष्ट्र शासन</a>
+        </li>
+        <li class="nav-item me-md-3 mb-1 mb-md-0">
+          <a class="nav-link py-1 font14" href="tel:8390322257"><i class="fa-solid fa-phone-flip"></i> 8390322257</a>
+        </li>
+        <li class="nav-item me-md-3 mb-1 mb-md-0">
+          <a class="nav-link py-1 font14" href="mailto:rajendramali2257@gmail.com"><i class="fa-solid fa-envelope"></i>
+            rajendramali2257@gmail.com</a>
+        </li>
+        <li class="nav-item mb-1 mb-md-0">
+          <a class="nav-link py-1 font14" href="#"><i class="fa-solid fa-location-dot"></i> PIN: 416404</a>
+        </li>
+      </ul>
+
+      <div class="social-media-icons d-flex mt-md-0 font14 text-center justify-content-center">
+        <a href="#" class="me-3 text-dark" target="_blank">
+          <i class="fab fa-facebook-f fa-lg"></i>
+        </a>
+        <a href="#" class="me-3 text-dark" target="_blank">
+          <i class="fab fa-instagram fa-lg"></i>
+        </a>
+        <a href="#" class="me-3 text-dark" target="_blank">
+          <i class="fab fa-twitter fa-lg"></i>
+        </a>
+        <a href="#" class="text-dark" target="_blank">
+          <i class="fab fa-youtube fa-lg"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
+  <div class="container-fluid padding">
+    <a class="navbar-brand mx-0 px-0" href="#"><img src="./assets/gp_logo.png" alt=""></a>
+    <div class="brand-text px-3 text-center">
+      <h1 class="brand-title mb-0 font18 fw-bold">ग्रामपंचायत सिंदुर</h1>
+      <p class="brand-subtitle mb-0 font12">
+        तालुका - जत, जिल्हा - सांगली
+      </p>
+    </div>
+    <button class="navbar-toggler p-0 border-0 pointer" type="button" (click)="isCollapsed = !isCollapsed"
+      [attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation">
+      <i [ngClass]="isCollapsed ? 'fas fa-bars' : 'fas fa-times'" style="font-size: 1.5rem;"></i>
+    </button>
+
+    <div [ngClass]="{'collapse navbar-collapse': true, 'show': !isCollapsed}" id="navbarContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 font12">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">मुख्य पान</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            आमच्याविषयी
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item font12" href="#">ऐतिहासिक माहिती</a></li>
+            <li><a class="dropdown-item font12" href="#">भौगोलिक माहिती</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ताज्या घडामोडी</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">सदस्य</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">सेवा</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">PDI रिपोर्ट कार्ड</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">संस्कृतिक माहिती</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">फोटो गॅलरी</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">महाराष्ट्रचे मंत्रीमंडळ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">उपयुक्त दुवे</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">फोटो गॅलरी</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            नागरी सुविधा
+          </a>
+
+          <ul class="dropdown-menu w-50">
+            <!-- <li><a class="dropdown-item font12" href="#">प्रमाणपत्र</a></li> -->
+
+            <!-- Submenu 1 -->
+            <li class="dropdown-submenu" [class.show]="openSubmenuIndex === 1" (mouseenter)="openSubmenu(1)"
+              (mouseleave)="closeSubmenu()">
+              <a class="dropdown-item dropdown-toggle font12" href="#" (click)="toggleSubmenu($event, 1)">
+                प्रमाणपत्र
+              </a>
+
+              <ul class="dropdown-menu" [class.show]="openSubmenuIndex === 1">
+                <li><a class="dropdown-item font12" href="#"> मालमत्तेचा नमुना ८ दाखला </a> </li>
+                <li> <a class="dropdown-item font12" href="#"> रहिवाशी दाखला</a></li>
+                <li> <a class="dropdown-item font12" href="#">वीजमीटरसाठी ना हरकत दाखला</a></li>
+                <li> <a class="dropdown-item font12" href="#">थकबाकी नसल्याचा दाखला</a></li>
+                <li> <a class="dropdown-item font12" href="#">शौचालय दाखला</a> </li>
+                <li> <a class="dropdown-item font12" href="#">घर बांधणी परवाना / दाखला</a> </li>
+                <li> <a class="dropdown-item font12" href="#">जन्म दाखला</a> </li>
+                <li> <a class="dropdown-item font12" href="#">मृत्यू दाखला</a> </li>
+                <li><a class="dropdown-item font12" href="#">विवाह नोंद दाखला</a></li>
+                <li> <a class="dropdown-item font12" href="#">दारिद्र्यरेषेखालील दाखला</a></li>
+                <li><a class="dropdown-item font12" href="#">व्यवसायासाठी ना हरकत दाखला</a></li>
+                <li><a class="dropdown-item font12" href="#">हयातीताचा दाखला</a></li>
+                <li><a class="dropdown-item font12" href="#">जन्म मृत्यू नोंद नसल्याचा दाखला</a></li>
+                <li><a class="dropdown-item font12" href="#">लाभ न घेतल्याचा दाखला</a></li>
+                <li><a class="dropdown-item font12" href="#">वर्तणूक दाखला</a></li>
+                <li><a class="dropdown-item font12" href="#">नळ जोडणीसाठी दाखला</a></li>
+                <li><a class="dropdown-item font12" href="#">बेरोजगार दाखला</a></li>
+                <li><a class="dropdown-item font12" href="#">मालमता फेरफार दाखला</a></li>
+              </ul>
+
+
+            </li>
+
+            <li class="dropdown-submenu" [class.show]="openSubmenuIndex === 2" (mouseenter)="openSubmenu(2)"
+              (mouseleave)="closeSubmenu()">
+              <a class="dropdown-item dropdown-toggle font12" href="#" (click)="toggleSubmenu($event, 2)">
+                तक्रार
+              </a>
+              <ul class="dropdown-menu" [class.show]="openSubmenuIndex === 2">
+                <li><a class="dropdown-item font12" href="#">स्वच्छता</a></li>
+                <li><a class="dropdown-item font12" href="#">शैक्षणिक</a></li>
+                <li><a class="dropdown-item font12" href="#">पाणी पुरवठा</a></li>
+                <li><a class="dropdown-item font12" href="#">विद्युत</a></li>
+              </ul>
+
+            </li>
+            <li class="dropdown-submenu" [class.show]="openSubmenuIndex === 3" (mouseenter)="openSubmenu(3)"
+              (mouseleave)="closeSubmenu()">
+              <a class="dropdown-item dropdown-toggle font12" href="#" (click)="toggleSubmenu($event, 3)">
+                अर्ज
+              </a>
+              <ul class="dropdown-menu" [class.show]="openSubmenuIndex === 3">
+                <li><a class="dropdown-item font12" href="#">प्रस्ताव</a></li>
+                <li><a class="dropdown-item font12" href="#">ठराव</a></li>
+                <li><a class="dropdown-item font12" href="#">NOC</a></li>
+                <li><a class="dropdown-item font12" href="#">मालमत्ता फेरफार / हस्तांतरण</a></li>
+              </ul>
+
+            </li>
+            <li>
+              <hr class="dropdown-divider mt-0" />
+            </li>
+            <li><a class="dropdown-item font12 blue fw-bold" href="#">मागील तक्रार स्थिती पहा</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="navbar-nav font12">
+        <a href="https://sindurgp.info/login font12" class="btn login-btn">
+          <i class="fas fa-sign-in-alt me-1"></i> लॉगिन
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
